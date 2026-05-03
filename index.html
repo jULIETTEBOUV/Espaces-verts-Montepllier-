@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet SIG - Webmapping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mise_en_page_css.css">
+</head>
+
+<body>
+
+<header>
+    <div class="top-header">
+        <h1>Projet SIG</h1>
+        <p>Université Marie et Louis Pasteur · Mai 2026 · BOUVERET Juliette</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li class="menu1"><a href="#carte1">Densité de population par commune (hab/ha)</a></li>
+            <li class="menu1"><a href="#carte2">Quantité d'espaces verts par habitants (m²/hab)</a></li>
+            <li class="menu1"><a href="#carte3">Couverture territoriale des espaces vert à 300m</a></li>
+            <li class="menu1"><a href="#carte4">Part des habitants résidant à moins de 5 min de marche d'un espace vert</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>L'accessibilité aux espaces verts urbains selon la densité dans la Métropole de Montpellier</h2>
+    <p>Comment la densité de population influence-t-elle l'accessibilité aux espaces verts dans la métropole de Montpellier ?</p>
+</section>
+
+<!-- CONTEXTE -->
+<section class="bloc">
+    <h2>Contexte</h2>
+    <p>La Métropole de Montpellier connaît l'une des croissances démographiques les plus soutenues de France, entraînant une densification urbaine rapide et continue. Dans ce contexte de « ville dense », l'accès aux espaces verts devient un enjeu de santé publique et de justice environnementale majeur. Le climat méditerranéen, marqué par des épisodes de fortes chaleurs de plus en plus fréquents, renforce le rôle de ces espaces comme îlots de fraîcheur indispensables.</p>
+    <p>L'enjeu de cette étude est de comprendre si la planification urbaine parvient à maintenir un équilibre entre la densité de population et une offre suffisante d'espace vert (seuil recommandé par l'OMS : 9m²/hab). Il s'agit donc d'analyser si la répartition des espaces verts urbains accompagne efficacement la concentration des habitants, afin de garantir à chaque citadin, quel que soit son quartier, une proximité immédiate avec la nature.</p>
+</section>
+
+<!-- CARTE 1 -->
+<section class="bloc" id="carte1">
+    <div class="text-carte">
+        <div class="texte">
+            <h2>Densité de population par commune (hab/ha)</h2>
+            <p>La carte de densité (hab/ha) par commune de la Métropole de Montpellier (MMM) révèle une structure centro-périphérique marquée. La commune-centre affiche les valeurs les plus élevées, comprises entre 22,9 et 53,8 hab/ha, constituant de loin le pôle de densité le plus intense du territoire. Autour d'elle, une couronne de communes péri-centrales présente des densités intermédiaires (6,1 à 22,9 hab/ha), tandis que les communes périphériques, notamment au nord, à l'est et au sud, affichent des densités très faibles, souvent inférieures à 3,3 hab/ha. Ce gradient traduit un tissu urbain fortement polarisé, au sein duquel la pression démographique s'exerce de manière très inégale sur les ressources vertes disponibles.</p>
+        </div>
+        <div class="carte-container">
+            <iframe src="Densité/index.html" class="mapframe"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CARTE 2 -->
+<section class="bloc" id="carte2">
+    <div class="text-carte">
+        <div class="texte">
+            <h2>Quantité d'espace vert par habitants (m²/hab)</h2>
+            <p>La carte du ratio d'espaces verts par habitant révèle une distribution paradoxalement inverse à celle de la densité. Les communes les mieux dotées, affichant entre 19,5 et 65,6 m²/hab, sont situées en périphérie ouest et nord-ouest de la métropole, là précisément où la population est la plus faible. À l'inverse, la commune-centre, malgré sa forte population, présente un ratio très bas (0 à 4,4 m²/hab), bien en dessous du seuil de 9 m²/hab recommandé par l'OMS Europe. Ce résultat illustre un « effet de dilution » classique : la densification urbaine réduit la dotation surfacique par habitant, même lorsque des espaces verts existent en valeur sur le territoire communal.</p>
+            <p>Plusieurs communes péri-centrales affichent des valeurs intermédiaires comprises entre 4,4 et 12,9 m²/hab, approchant sans atteindre le seuil OMS. Seules quelques communes périphériques dépassent largement ce seuil, avec des ratios pouvant atteindre 65,6 m²/hab, reflétant la présence de grands espaces verts sur des territoires peu peuplés.</p>
+        </div>
+        <div class="carte-container">
+            <iframe src="Ratio_evm2_hab/index.html" class="mapframe"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CARTE 3 -->
+<section class="bloc" id="carte3">
+    <div class="text-carte">
+        <div class="texte">
+            <h2>Couverture territoriale des espaces vert à 300m</h2>
+            <p>La carte de couverture territoriale à 300 mètres confirme et complète la lecture précédente. Les taux d'accessibilité les plus élevés (28,3 à 54,7 %) se concentrent dans le cœur de l'agglomération, où la densité du maillage vert permet une couverture spatiale plus homogène de la superficie communale. Les communes du quart nord-est et du sud du territoire demeurent en retrait, avec des taux de couverture compris entre 0 et 7,6 %, signalant des zones de sous-accessibilité structurelle au regard des recommandations de l'OMS.</p>
+            <p>Il convient de noter que cet indicateur mesure la proportion de la superficie communale couverte par les tampons de 300 m, et non la proportion de la population couverte. Il constitue donc un indicateur d'équité spatiale complémentaire au précédent, permettant de voir si les espaces verts sont bien répartis sur tout le territoire, même dans les zones moins peuplées.</p>
+        </div>
+        <div class="carte-container">
+            <iframe src="Taux_accessibilite/index.html" class="mapframe"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CARTE 4 -->
+<section class="bloc" id="carte4">
+    <div class="text-carte">
+        <div class="texte">
+            <h2>Part des habitants résidant à moins de 5 min de marche d'un espace vert</h2>
+            <p>L'analyse de l'accessibilité effective vient nuancer et compléter les résultats précédents. La carte de la part des habitants résidant à moins de 5 minutes de marche (300 m) d'un espace vert montre que certaines communes centrales et péri-centrales, notamment au centre-ouest du territoire, atteignent des taux de 60 à 85,4 %. Ce résultat démontre une bonne accessibilité piétonne grâce à un maillage bien réparti, qui compense une surface totale d'espaces verts parfois limitée.</p>
+            <p>À l'opposé, plusieurs communes périphériques présentent un taux inférieur à 20 %, révélant que leur ratio m²/hab élevé masque en réalité une concentration des espaces verts sur une portion restreinte du territoire, peu accessible à la majorité des habitants. On remarque également une commune à l'est de la métropole qui affiche un taux remarquablement élevé (80–85,4 %), atténuant le gradient centre-périphérie général.</p>
+        </div>
+        <div class="carte-container">
+            <iframe src="Population_desservie/index.html" class="mapframe"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CONCLUSION -->
+<section class="bloc">
+    <h2>Conclusion</h2>
+    <p>L'étude révèle un paradoxe : les zones denses manquent de surface verte (sous les seuils OMS) mais offrent une bonne proximité piétonne grâce à un maillage « capillaire ». À l'inverse, la périphérie dispose de grands espaces mais d'une faible accessibilité réelle. La réussite de l'aménagement d'espace vert dépend donc plus de leur répartition stratégique que de leur superficie totale.</p>
+</section>
+
+<footer>
+    <p>© Mai 2026 – BOUVERET Juliette</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
